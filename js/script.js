@@ -1,5 +1,7 @@
 function init() {
-navFunction();
+  barLink = get
+  var barElem = document.getElementById("barLink");
+  barElem.addEventListener("click", navFunction);
 }
 
 
