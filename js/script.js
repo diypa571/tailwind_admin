@@ -1,6 +1,6 @@
 function init() {
-  var barElem = document.getElementById("barLink");
-  barElem.addEventListener("click", navFunction);
+  var barElem = document.getElementById("barLink"); // Get the a element for the navigatin
+  barElem.addEventListener("click", navFunction); // Craete an AddEventLister for it and call the navfunction
 }
 
 
