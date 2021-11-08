@@ -1,194 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
-
-
-<style>
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-
-.sidebar a.active {
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
-
-  color: white;
-}
-
-div.content {
-  margin-left: 200px;
-
-  height: 1000px;
-}
-
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-</style>
-
-
-
-
-
-
-
-<style>
-
-.topnav {
-  overflow: hidden;
-}
-
-.topnav a {
-  color: white;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-      color: white;
-  }
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 
-<div class="sidebar bg-gray-900">
 
-  <div class="topnav" id="myTopnav">
-    <a href="#home" class="active text-white"><i class="text-5xl fab fa-slideshare mt-2"></i>ADMIN</a>
-    <a href="#news" class="text-white">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars text-white mt-4 text-4xl"></i>
-    </a>
-  </div>
+  <!-- The sidebar & navigation-->
+<div class="sidebar bg-gray-900"><!-- Start of the sidebar and the navigation-->
+
+    <div class="topnav" id="myTopnav">   <!-- Start of the navigation-->
+        <a href="index.html" class="active text-white"><i class="text-5xl fab fa-slideshare mt-2"></i>ADMIN</a>
+        <a href="#news" class="text-white">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" id="barLink">
+          <i class="fa fa-bars text-white mt-4 text-4xl"></i>
+        </a>
+
+        
+    </div> <!-- End of the navigation-->
 
 
+
+
+
+
+
+
+
+
+
+    
+</div> <!--End of the sidebar and the navigation-->
+
+
+
+
+
+
+<!-- Start of Content-->
+<div class="content"> 
+
+
+<!--Start of the dashboard-->
+<div class=" rounded-sm bg-gray-200 p-1">
+<div class="flex flex-row items-center">
+
+<div class="flex-shrink"> <!--Left Side-->
+<div class="relative   my-2">  
+ 
+<span class="flex relative mx-auto max-w-md"> <!--Search-->
+<input class="border-2   h-12 w-24 md:w-auto   rounded-md focus:outline-none   text-black text-lg " type="search" name="search" placeholder=" Search" />
+<i class="fas fa-search rounded-sm p-2 ml-1 text-3xl border-2 bg-gray-100"></i>
+</span>  <!--End of Search-->
 
 </div>
-
-
-
-
-
-
-
-
-<div class="content">   <!-- Start of Content-->
-
-
-<!--Metric Card-->
-<div class=" rounded-sm bg-gray-100 p-5">
-  <div class="flex flex-row items-center">
-    <div class="flex-shrink">
-    <div class="rounded-full p-5 bg-green-600"><i class="fa fa-wallet fa-2x fa-inverse"></i></div>
-    </div>
-    <div class="flex-1 text-right md:text-right">
-    <h5 class="font-bold uppercase text-gray-600">Total Revenue</h5>
-    <h3 class="font-bold text-3xl">$3249 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
-    </div>
-  </div>
+</div>  <!--End of the Left Side-->
+ 
+<div class="flex-1 text-right md:text-right"> <!--Right Side-->
+<div class="group inline-block">
+<button class="outline-none focus:outline-none border px-3 py-1 rounded-sm flex items-center min-w-32" >
+<span class="font-semibold flex-1 text-4xl"> <i class="fas fa-user"></i>  <i class="fas fa-caret-down text-green-500"></i>  </span>
+</button>
+<ul class="text-left bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute ease-in-out origin-top min-w-32">
+<li class="px-3 py-1 hover:bg-gray-100">Settings</li>
+<li class="px-3 py-1 hover:bg-gray-100">Profile</li>
+</ul>
 </div>
-<!--/Metric Card-->
+</div> <!--End of the Right Side-->
+
+</div>
+</div> <!--End of the dashboard-->
+ 
+
+
+
+
+ 
+
 
 
 
 
 </div> <!-- End of Content-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <script>
-              function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                  x.className += " responsive";
-                } else {
-                  x.className = "topnav";
-                }
-              }
-              </script>
-
 
 
 
