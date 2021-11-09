@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,8 @@
 <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <script type="text/javascript" src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -15,16 +16,16 @@
   <!-- The sidebar & navigation-->
 <div class="sidebar bg-gray-900"><!-- Start of the sidebar and the navigation-->
 
-    <div class="topnav" id="myTopnav">   <!-- Start of the navigation-->
+    <div class="globalNav" id="globalNavEl">   <!-- Start of the navigation-->
         <a href="index.html" class="active text-white"><i class="text-5xl fab fa-slideshare mt-2"></i>ADMIN</a>
         <a href="#news" class="text-white">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
+        
         <a href="javascript:void(0);" class="icon" id="barLink">
           <i class="fa fa-bars text-white mt-4 text-4xl"></i>
         </a>
-
-        
+   
     </div> <!-- End of the navigation-->
 
 
@@ -95,28 +96,12 @@
 </div>
 </div>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
 
 <!-- Start Responsive grid -->
 <div class="w-max-screen-xl p-1">
-<h2 class="text-4xl bg-gray-100 p-4 border-bottom rounded-sm">Dashboard <i class="fas fa-tachometer-alt"></i> </h2>
+<h2 class="text-4xl bg-gray-300 p-4 border-bottom rounded-sm">Dashboard <i class="fas fa-tachometer-alt"></i> </h2>
 
 <div class="flex flex-wrap"> <!-- Flex -->
  <div class="w-full sm:w-1/2 lg:w-1/3 flex flex-col"> <!-- Col 1-->
@@ -153,21 +138,69 @@ Lorem ipsum dolor sit amet<hr />
 <!-- End  Responsive grid -->
 
 
+ 
 
 
-<div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
-  <div class="flex">
-    <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
-    <div>
-      <p class="font-bold">Our privacy policy has changed</p>
-      <p class="text-sm">Make sure you know how these changes affect you.</p>
+<section class="flex flex-wrap">       <!--/Report section -->
+<div class="w-full md:w-1/2 xl:w-1/2 p-2">
+    <!--Report Card-->
+    <div class="bg-blue-400 border-b-4 border-blue-600 rounded-lg shadow-xl p-5">
+        <div class="flex flex-row items-center">
+            <div class="flex-shrink pr-4">
+                <div class="rounded-full p-5 bg-blue-600"><i class="fa fa-wallet fa-2x fa-inverse"></i></div>
+            </div>
+            <div class="flex-1 text-right md:text-center">
+                <h5 class="font-bold uppercase text-gray-100">This week</h5>
+                <h3 class="font-bold text-3xl">$0.1 <span class="text-gray-100"><i class="fas fa-caret-up"></i></span></h3>
+            </div>
+        </div>
     </div>
-  </div>
+    <!--/Report Card-->
+</div>
+
+<div class="w-full md:w-1/2 xl:w-1/2 p-6">
+          <!--Report Card-->
+    <div class="bg-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+        <div class="flex flex-row items-center">
+            <div class="flex-shrink pr-4">
+                <div class="rounded-full p-5 bg-pink-600"><i class="fas fa-file-invoice-dollar fa-2x"></i></div>
+            </div>
+            <div class="flex-1 text-right md:text-center">
+                <h5 class="font-bold uppercase text-gray-600">Total Users</h5>
+                <h3 class="font-bold text-3xl">249 <span class="text-pink-500"><i class="fas fa-exchange-alt"></i></span></h3>
+            </div>
+        </div>
+    </div>
+    <!--/Report Card-->
+</div>
+</section>
+
+
+
+
+ 
+
+<div class="w-full p-2">
+<!--Graph Card-->
+<div class="bg-white border-transparent rounded-lg shadow-xl">
+    <div class="bg-gray-600 uppercase text-gray-100 border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg p-2">
+        <h5 class="font-bold uppercase"> <i class="fas fa-chart-line text-5xl"></i> Graph</h5>
+    </div>
+    <div class="p-5">
+        <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+        <script type="text/javascript" src="js/graph1.js"></script>
+      </div>
+</div>
+<!--/Graph Card-->
 </div>
 
 
 
 
+<!--Alterts-->
+<!--Alterts-->
+<!--Alterts-->
+<section class="p-2"> 
 <div class="w-full px-6 py-3 rounded-sm border text-green-800 bg-green-400 border-green-500" role="alert">This is a primary alert. Use it anywhere!</div>
 <div class="w-full px-6 py-3 rounded-sm border text-blue-800 bg-blue-400 border-blue-500" role="alert">This is a secondary alert. Use it some places!</div>
 <div class="w-full px-6 py-3 rounded-sm border text-red-800 bg-red-400 border-red-500" role="alert">This is a danger alert. Use it places the user shouldn't be!</div>
@@ -175,9 +208,13 @@ Lorem ipsum dolor sit amet<hr />
 <div class="w-full px-6 py-3 rounded-sm border text-indigo-800 bg-indigo-400 border-indigo-500" role="alert">This is a info alert. Use it for cool tips!</div>
 <div class="w-full px-6 py-3 rounded-sm border text-gray-800 bg-gray-200 border-gray-300" role="alert">This is a light alert. Don't use this in dark mode!</div>
 <div class="w-full px-6 py-3 rounded-sm border text-black bg-gray-700 border-gray-800" role="alert">This is a dark alert. Use it in dark mode!</div>
-
+</section>  
+<!--/ Alterts-->
+<!--/ Alterts-->
+<!--/ Alterts-->
 
   
+
 <footer class="w-max-screen-xl p-1"> 
 <div class="text-1xl text-center bg-gray-200 p-4 border-bottom">Diyp.. </div>
 </footer> 
@@ -185,8 +222,7 @@ Lorem ipsum dolor sit amet<hr />
 
 </div> <!-- End of Content-->
 
-
-
+ 
 
 
 

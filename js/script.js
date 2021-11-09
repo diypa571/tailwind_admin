@@ -5,11 +5,11 @@ function init() {
 
 
 function navFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+  var navEl = document.getElementById("globalNavEl");
+  if (navEl.className === "globalNav") {
+    navEl.className += " responsive";
   } else {
-    x.className = "topnav";
+    navEl.className = "globalNav";
   }
 }
 
