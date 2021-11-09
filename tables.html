@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</head>
+<body>
+
+
+  <!-- The sidebar & navigation-->
+<div class="sidebar bg-gray-900"><!-- Start of the sidebar and the navigation-->
+
+    <div class="globalNav" id="globalNavEl">   <!-- Start of the navigation-->
+        <a href="index.html" class="active text-white"><i class="text-5xl fab fa-slideshare mt-2"></i>ADMIN</a>
+        <a href="gallery.html">  <i class="far fa-image"></i>  Gallery </a>
+        <a href="calender.html">  <i class="far fa-calendar-alt"></i> Calender </a>
+        <a href="tables.html">  <i class="fas fa-table"></i> Tables </a>
+        <a href="form.html">  <i class="fas fa-edit"></i> Forms </a>
+        <a href="buttons.html">   <i class="far fa-circle nav-icon"></i> Buttons </a>
+        <a href="sliders.html"> <i class="far fa-circle nav-icon"></i> Sliders </a>
+        <a href="modals.html">  <i class="far fa-circle nav-icon"></i> Modals</a>
+        <a href="navbar.html"> <i class="far fa-circle nav-icon"></i> Navbar</a>
+      
+        <a href="javascript:void(0);" class="icon" id="barLink">
+          <i class="fa fa-bars text-white mt-4 text-4xl"></i>
+        </a>
+   
+    </div> <!-- End of the navigation-->
+ 
+</div> <!--End of the sidebar and the navigation-->
+
+
+
+
+
+
+<!-- The content will be the main section for all the dashboard content-->
+<div class="content">  <!-- Start of Content-->
+
+<!--Start of the top section-->
+<!--Start of the top section-->
+<!--Start of the top section-->
+<div class=" rounded-sm bg-gray-200 p-1">
+<div class="flex flex-row items-center">
+
+<div class="flex-shrink"> <!--Left Side-->
+<div class="relative   my-2">  
+ 
+<span class="flex relative mx-auto max-w-md"> <!--Search-->
+<input class="border-2   h-12 w-24 md:w-auto   rounded-md focus:outline-none   text-black text-lg " type="search" name="search" placeholder=" Search" />
+<i class="fas fa-search rounded-sm p-2 ml-1 text-3xl border-2 bg-gray-100"></i>
+</span>  <!--End of Search-->
+
+</div>
+</div>  <!--End of the Left Side-->
+  
+
+
+<div class="flex-1 text-right md:text-right"> <!--Right Side-->
+<div class="group inline-block">
+<button class="outline-none focus:outline-none border px-3 py-1 rounded-sm flex items-center min-w-32" >
+<span class="font-semibold flex-1"> <i class="fas fa-user text-4xl"></i>  <i class="fas fa-caret-down text-green-400 animate-ping text-3xl"></i>  </span>
+</button>
+<ul class="text-left bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute ease-in-out origin-top min-w-32">
+<li class="px-3 py-1 hover:bg-gray-100 m-2"><a href="#"> <i class="fas fa-cogs"></i> Settings</a></li>
+  <li class="px-3 py-1 hover:bg-gray-100 m-2"><a href="#"><i class="fas fa-users-cog"></i> Profile</a></li>
+</ul>
+</div>
+</div> <!--End of the Right Side-->
+
+</div>
+</div> <!--End of the top section-->
+ <!--End of the top section-->
+ <!--End of the top section-->
+ <!--End of the top section-->
+ <!--End of the top section-->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- This is a  calender component -->
+  
+ 
+ 
+<!-- Start Responsive grid -->
+<div class="w-max-screen-xl p-1">
+    <h2 class="text-4xl bg-gray-300 p-4 border-bottom rounded-sm">Dashboard <i class="fas fa-tachometer-alt"></i> </h2>
+     
+
+ 
+
+<section class="py-1">
+<div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4 mx-auto mt-5">
+<div class="relative flex flex-col min-w-0 break-words bg-gray-300 w-full mb-6 shadow-lg rounded ">
+<div class="rounded-t mb-0 px-4 py-3 border-0">
+	<div class="flex flex-wrap items-center">
+	<div class="relative w-full px-4 max-w-full flex-grow flex-1">
+		<h3 class="font-semibold text-base text-blueGray-700">Page Visits</h3>
+	</div>
+	<div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+		<button class="bg-indigo-500 text-white text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+View more </button>
+	</div>
+	</div>
+</div>
+
+<div class="block w-full overflow-x-auto">
+	<table class="items-center bg-transparent w-full border-collapse ">
+	<thead>
+<tr>
+<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+				Item
+			</th>
+<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+				Price
+			</th>
+<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+			Date
+			</th>
+<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+			Availabe
+			</th>
+</tr>
+	</thead>
+
+	<tbody>
+<tr>
+	<th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+	Car
+	</th>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+		$10
+	</td>
+	<td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		2021-11-20
+	</td>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+	Yes
+	</td>
+</tr>
+
+<tr>
+	<th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+PC
+	</th>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+		$10
+	</td>
+	<td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		2021-11-20
+	</td>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+	Yes
+	</td>
+</tr>
+
+
+
+
+<tr>
+	<th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+TV
+	</th>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+		$10
+	</td>
+	<td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		2021-11-20
+	</td>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+	Yes
+	</td>
+</tr>
+
+
+
+<tr>
+	<th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+House
+	</th>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+		$10
+	</td>
+	<td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		2021-11-20
+	</td>
+	<td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+		<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+	Yes
+	</td>
+</tr>
+
+ 
+	</tbody>
+
+	</table>
+</div>
+</div>
+</div>
+
+</section>
+  
+
+
+
+
+<footer class="w-max-screen-xl p-1"> 
+<div class="text-1xl text-center bg-gray-200 p-4 border-bottom">Developed by Diyp571@gmail.com</div>
+</footer> 
+
+
+</div> <!-- End of Content-->
+
+ 
+
+
+
+</body>
+</html>
