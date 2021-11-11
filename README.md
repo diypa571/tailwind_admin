@@ -4,6 +4,7 @@ I will develop a responsive dashboard with tailwind
 The sources I will use!
 1- https://v1.tailwindcss.com
 2- https://tailwindcomponents.com/
+3- https://tailwindcomponents.com/component/button-component
 
 Free to use no  restrictions
 
