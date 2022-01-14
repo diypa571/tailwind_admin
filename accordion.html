@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+<link href="css/tailwind.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 <script type="text/javascript" src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
@@ -28,7 +29,7 @@
         <a href="grid.html"> <i class="far fa-circle nav-icon"></i> Grid </a>
         <a href="blank.html"> <i class="far fa-circle nav-icon"></i> Blank </a>
         <a href="accordion.html"> <i class="far fa-circle nav-icon"></i> Accordion</a>
- 
+
         <a href="javascript:void(0);" class="icon" id="barLink">
           <i class="fa fa-bars text-white mt-4 text-4xl"></i>
         </a>
@@ -84,38 +85,38 @@
  <!--End of the top section-->
 
 
- 
 
 
- 
+
+
 <style>
   .accordion {
 
-  
+
     width: 100%;
 
   }
-  
+
   .panel {
     display: none;
     overflow: hidden;
   }
   </style>
 
-  
-  <div class="bg-blue-200 p-2 mx-2 round-sm mt-1"> 
-      
+
+  <div class="bg-blue-200 p-2 mx-2 round-sm mt-1">
+
   <h2 class="bg-dark-800 p-4 text-center font-black">Accordion</h2>
   <button class="border-solid border-4 border-light-blue-500  text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 1</button>
   <div class="panel bg-blue-100 p-4">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-  
+
   <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 2</button>
   <div class="panel bg-blue-100 p-4">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-  
+
   <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 3</button>
     <div class="panel bg-blue-100 p-4">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -125,7 +126,7 @@
 
   <script>
   var accordElement = document.getElementsByClassName("accordion");
-      
+
   for (i = 0; i < accordElement.length; i++) {
     accordElement[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -138,7 +139,7 @@
     });
   }
   </script>
-  
+
 
 
 

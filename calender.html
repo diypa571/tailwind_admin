@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+<link href="css/tailwind.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 <script type="text/javascript" src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
@@ -52,7 +52,7 @@
 <div class="flex flex-row items-center">
 
 <div class="flex-shrink"> <!--Left Side-->
-<div class="relative   my-2">  
+<div class="relative   my-2">
 
 <span class="flex relative mx-auto max-w-md"> <!--Search-->
 <input class="border-2   h-12 w-24 md:w-auto   rounded-md focus:outline-none   text-black text-lg " type="search" name="search" placeholder=" Search" />
@@ -129,36 +129,36 @@ Schedule Tasks
 		<span x-text="year" class="ml-1 text-lg text-gray-600 font-normal"></span>
 	</div>
 	<div class="border rounded-lg px-1" style="padding-top: 2px;">
-		<button 
+		<button
 			type="button"
-			class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center" 
+			class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center"
 			:class="{'cursor-not-allowed opacity-25': month == 0 }"
 			:disabled="month == 0 ? true : false"
 			@click="month--; getNoOfDays()">
 			<svg class="h-6 w-6 text-gray-500 inline-flex leading-none"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-			</svg>  
+			</svg>
 		</button>
-		<div class="border-r inline-flex h-6"></div>		
-		<button 
+		<div class="border-r inline-flex h-6"></div>
+		<button
 			type="button"
-			class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1" 
+			class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1"
 			:class="{'cursor-not-allowed opacity-25': month == 11 }"
 			:disabled="month == 11 ? true : false"
 			@click="month++; getNoOfDays()">
 			<svg class="h-6 w-6 text-gray-500 inline-flex leading-none"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-			</svg>									  
+			</svg>
 		</button>
 	</div>
-</div>	
+</div>
 
 <div class="-mx-1 -mb-1">
 	<div class="flex flex-wrap" style="margin-bottom: -40px;">
-		<template x-for="(day, index) in DAYS" :key="index">	
+		<template x-for="(day, index) in DAYS" :key="index">
 			<div style="width: 14.26%" class="px-2 py-2">
 				<div
-					x-text="day" 
+					x-text="day"
 					class="text-gray-600 text-sm uppercase tracking-wide font-bold text-center"></div>
 			</div>
 		</template>
@@ -166,26 +166,26 @@ Schedule Tasks
 
 	<div class="flex flex-wrap border-t border-l">
 		<template x-for="blankday in blankdays">
-			<div 
+			<div
 				style="width: 14.28%; height: 120px"
-				class="text-center border-r border-b px-4 pt-2"	
+				class="text-center border-r border-b px-4 pt-2"
 			></div>
-		</template>	
-		<template x-for="(date, dateIndex) in no_of_days" :key="dateIndex">	
+		</template>
+		<template x-for="(date, dateIndex) in no_of_days" :key="dateIndex">
 			<div style="width: 14.28%; height: 120px" class="px-4 pt-2 border-r border-b relative">
 				<div
 					@click="showEventModal(date)"
 					x-text="date"
 					class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100"
-					:class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"	
+					:class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"
 				></div>
 				<div style="height: 80px;" class="overflow-y-auto mt-1">
-					<!-- <div 
+					<!-- <div
 						class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
 						x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
 						x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
 
-					<template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">	
+					<template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">
 						<div
 							class="px-2 py-1 rounded-lg mt-1 overflow-hidden border"
 							:class="{
@@ -250,10 +250,10 @@ Schedule Tasks
 	<div class="mt-8 text-right">
 		<button type="button" class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm mr-2" @click="openEventModal = !openEventModal">
 			Cancel
-		</button>	
+		</button>
 		<button type="button" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-700 rounded-lg shadow-sm" @click="addEvent()">
 			Save Event
-		</button>	
+		</button>
 	</div>
 </div>
 </div>
@@ -408,9 +408,9 @@ getNoOfDays() {
 
 
 
-<footer class="w-max-screen-xl p-1"> 
+<footer class="w-max-screen-xl p-1">
 <div class="text-1xl text-center bg-gray-200 p-4 border-bottom">Developed by Diyp571@gmail.com</div>
-</footer> 
+</footer>
 
 
 </div> <!-- End of Content-->
